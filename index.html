@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <title>Results summary component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Your Result</h1>
+        <div class="main-score"><p class="main-score-result">76</p><p class="main-score-100">of 100</p></div>
+        <h2>Great</h2>
+        <p class="description">You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+      
+      <div class="summary">
+        <h3>Summary</h3>
+      <div class="stats-container">
+        <div class="stat reaction-bg-color">
+          <div class="reaction-image"></div>
+            <p class="stat-title reaction-color">Reaction</p>
+            <p class="score">80 <span>/ 100</span></p>
+        </div>
+        <div class="stat memory-bg-color">
+          <div class="memory-image"></div>
+          <p class="stat-title memory-color">Memory</p>
+          <p class="score">92 <span>/ 100</span></p>
+        </div>
+        <div class="stat verbal-bg-color">
+          <div class="verbal-image"></div>
+          <p class="stat-title verbal-color">Verbal</p>
+          <p class="score">61 <span>/ 100</span></p>
+        </div>
+        <div class="stat visual-bg-color">
+          <div class="visual-image"></div>
+          <p class="stat-title visual-color">Visual</p>
+          <p class="score">72 <span>/ 100</span></p>
+        </div>
+      </div>
+      <button>Continue</button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
