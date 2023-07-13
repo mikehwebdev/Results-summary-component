@@ -37,7 +37,7 @@ header {
   width: 85%;
 }
 
-h1 {
+.result-title {
   font-family: 'Hanken Grotesk';
   color:hsl(0, 0%, 100%);
   font-weight: 500;
@@ -66,7 +66,7 @@ h1 {
   color:hsl(241, 100%, 89%);
 }
 
-h2 {
+.opinion-title {
   color: hsl(0, 0%, 100%);
   font-size: 22px;
   font-weight: 500;
@@ -178,7 +178,7 @@ button {
 }
 
 @media (min-width: 750px) { 
-  
+
   body {
     background-color: hsl(0, 0%, 100%);
   }
@@ -206,10 +206,11 @@ button {
     font-size: 15px;
   }
 
-  h1 {
+  .result-title {
     margin: 30px 0;
   }
-  h2 {
+
+  .opinion-title {
     font-size: 26px;
   }
 
