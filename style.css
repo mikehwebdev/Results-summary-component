@@ -2,11 +2,12 @@
   box-sizing: border-box;
   margin: 0;
   font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 body {
-  background-color: hsl(221, 100%, 96%);
+  background-color: hsla(220, 100%, 96%, 1);
   display: grid;
   place-items: center;
   justify-content: center;
@@ -18,87 +19,121 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-header, .summary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 375px;
+  min-width: 23.4375rem;
 }
 
 header {
   background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 32px 32px;
+  display: grid;
+  grid-template-rows: 1.5rem 2.9375rem 8.75rem 1.5rem 2.4375rem 5.125rem;
+  grid-template-columns: 3.625rem 3.75rem 8.75rem 3.75rem 3.625rem;
+  grid-template-areas: 
+  ". . . . ."
+  ". . result-title . ."
+  ". . main-score . ."
+  ". . . . ."
+  ". . opinion-title . ."
+  ". description description description ."
+  ;
+  
 }
 
 .summary {
   color: hsl(224, 30%, 27%);
-  align-items: flex-start;
-  width: 85%;
+  display: grid;
+  grid-template-rows: 1.5rem 2.9375rem 3.5rem 1rem 3.5rem 1rem 3.5rem 1rem 3.5rem 1.5rem 3.5rem 1.875rem;
+  grid-template-columns: 1.875rem 19.6875rem 1.875rem;
+  grid-template-areas: 
+  ". . ."
+  ". sum-title ."
+  ". reaction ."
+  ". . ."
+  ". memory ."
+  ". . ."
+  ". verbal ."
+  ". . ."
+  ". visual ."
+  ". . ."
+  ". button ."
+  ". . ."
+  ;
+
 }
 
+header, .summary{
+  min-width: 19.6875rem;
+}
+
+.summary-title {
+  grid-area: sum-title;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
 .result-title {
   font-family: 'Hanken Grotesk';
-  color:hsl(0, 0%, 100%);
-  font-weight: 500;
-  margin: 24px 0;
+  color:hsla(241, 100%, 89%, 1);
+  grid-area: result-title;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  
 }
 
 .main-score {
-  width: 130px;
-  height: 130px;
+  min-width: 8.75rem;
+  min-height: 8.75rem;
   border-radius: 50%;
   background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: hsl(0, 0%, 100%);
+  grid-area: main-score;
+  display: grid;
+  grid-template-rows: 1.5625rem 4.5rem 2.6875rem;
+  grid-template-columns: 2.375rem 3.9375rem 2.4375rem;
+  grid-template-areas: 
+  ". . ."
+  ". main-score-result ."
+  ". main-score-100 ."
+  ;
 }
 
 .main-score-result {
-  font-size: 48px;
+  font-size: 3.5rem;
   font-weight: 800;
+  grid-area: main-score-result;
+  text-align: center;
+  line-height: 4.5rem;
 }
 
 .main-score-100 {
-  font-size: 14px;
-  color:hsl(241, 100%, 89%);
+  color:hsla(241, 100%, 89%, 1);
+  grid-area: main-score-100;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.5168;
 }
 
 .opinion-title {
   color: hsl(0, 0%, 100%);
-  font-size: 22px;
-  font-weight: 500;
-  margin: 24px 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  grid-area: opinion-title;
+  text-align: center;
 }
 
 .description {
-  color:hsl(241, 100%, 89%);
-  padding: 0 40px;
-  margin-bottom: 40px;
+  color:hsla(241, 100%, 89%,1);
   text-align: center;
-  font-size: 16px;
+  grid-area: description;
 }
 
-.summary-title {
-  margin: 22px 0;
-}
 
-.stats-container {
-  width: 100%;
-  margin-bottom: 6px;
-}
-
-.stat > p {
-  font-size: 16px;
-  font-weight: 700;
-}
 .stat {
   display: flex;
-  padding: 16px;
-  margin-bottom: 18px;
-  border-radius: 10px;
+  min-width: 19.6875rem;
+  min-height: 3.5rem;
+  padding: 1.065rem 1rem 1.125rem 1rem;
+  border-radius: 12px;
 }
 
 .score {
@@ -106,17 +141,17 @@ header {
 }
 
 span {
-  color: hsl(241, 100%, 89%); 
-  font-size: 16px;
+  color: hsla(223, 30%, 27%, 1);
+  opacity: 0.5; 
 }
 
 .stat-title {
-  margin-left: 14px;
+  margin-left: 0.75rem;
 }
 
 .reaction-image, .memory-image, .verbal-image, .visual-image {
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .reaction-color {
@@ -125,6 +160,7 @@ span {
 
 .reaction-bg-color {
   background-color:hsla(0, 100%, 67%, 0.05);
+  grid-area: reaction;
 }
 
 .memory-color {
@@ -133,6 +169,7 @@ span {
 
 .memory-bg-color {
   background-color:hsla(39, 100%, 56%, 0.05);
+  grid-area: memory;
 }
 
 .verbal-color {
@@ -141,6 +178,7 @@ span {
 
 .verbal-bg-color {
   background-color:hsla(166, 100%, 37%, 0.05);
+  grid-area: verbal;
 }
 
 .visual-color {
@@ -149,6 +187,7 @@ span {
 
 .visual-bg-color {
   background-color:hsla(234, 85%, 45%, 0.05);
+  grid-area: visual;
 }
 
 .reaction-image {
@@ -169,12 +208,12 @@ span {
 
 button {
   background-color:  hsl(224, 30%, 27%);
-  width: 100%;
-  border-radius: 25px;
-  padding: 14px 0;
+  width: 19.6875rem;
+  border-radius: 128px;
+  padding: 1.0625rem 0 1rem 0;
   color: hsl(0, 0%, 100%);
   border: none;
-  margin-bottom: 24px;
+  grid-area:  button;
 }
 
 @media (min-width: 750px) { 
@@ -182,11 +221,12 @@ button {
   body {
     background-color: hsl(0, 0%, 100%);
   }
+
   .container {
     flex-direction: row;
     width: 750px;
-    height: 600px;
-    border-radius: 30px 30px;
+    height: 500px;
+    border-radius: 50px 50px;
     box-shadow: 0px 15px 25px -6px rgba(0,0,0,0.1);
   }
 
@@ -215,7 +255,6 @@ button {
   }
 
   .summary-title {
-    margin-top: 16px;
     font-size: 20px;
   }
 
