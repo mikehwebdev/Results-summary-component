@@ -292,6 +292,7 @@ button {
   button {
     min-width: 18rem;
     font-size: 1.125rem;
+    font-weight: 700;
   }
 
   button:hover {
