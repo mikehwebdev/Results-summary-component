@@ -143,6 +143,7 @@ header {
 span {
   color: hsla(223, 30%, 27%, 1);
   opacity: 0.5; 
+  margin-left: 0.5rem;
 }
 
 .stat-title {
@@ -286,11 +287,6 @@ button {
 
   .main-score-result {
     font-size: 4.5rem;
-  }
-
-  .reaction-image, .memory-image, .verbal-image, .visual-image {
-    width: 1.125rem;
-    height: 1.125rem;
   }
 
   button {
